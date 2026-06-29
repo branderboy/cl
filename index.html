@@ -8,16 +8,16 @@
 <style>
 :root {
   --purple: #9B59B6;
-  --purple-light: #C39BD3;
-  --purple-bright: #BB6BD9;
+  --purple-light: #7D3C98;   /* darkened for readable accents on white */
+  --purple-bright: #8E44AD;
   --purple-deep: #6C3483;
-  --purple-dark: #1A0A2E;
-  --black: #0A0A0F;
-  --black2: #111118;
-  --black3: #18182A;
-  --white: #F5F3FA;
-  --gray: #8E8BA3;
-  --pink: #E056A0;
+  --purple-dark: #EDE3F5;    /* now a light lavender for the close gradient */
+  --black: #FFFFFF;          /* primary surface, now white */
+  --black2: #F7F5FB;         /* subtle off-white band */
+  --black3: #EFEAF7;         /* light lavender band */
+  --white: #1A1525;          /* primary ink, now dark */
+  --gray: #5E586E;
+  --pink: #C42B86;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
@@ -76,7 +76,7 @@ body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--white);
 .hero-img-wrap{position:relative;z-index:2;display:flex;justify-content:center}
 .hero-img-wrap img{
   width:440px;height:440px;object-fit:cover;border-radius:20px;
-  box-shadow:0 60px 120px rgba(0,0,0,0.5),0 0 0 1px rgba(155,89,182,0.15),0 0 80px rgba(155,89,182,0.08);
+  box-shadow:0 40px 90px rgba(108,52,131,0.18),0 0 0 1px rgba(155,89,182,0.18),0 0 60px rgba(155,89,182,0.06);
 }
 .hero-img-glow{
   position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
@@ -90,7 +90,7 @@ body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--white);
 .origin-year{
   font-family:'Bricolage Grotesque',sans-serif;
   font-size:120px;font-weight:800;line-height:1;
-  background:linear-gradient(180deg,rgba(195,155,211,0.7) 0%,rgba(195,155,211,0.3) 100%);
+  background:linear-gradient(180deg,var(--purple-deep) 0%,var(--purple) 100%);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   margin-bottom:24px;
 }
@@ -184,7 +184,7 @@ body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--white);
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;font-style:normal;
 }
 .nmw-story{
-  font-size:18px;line-height:1.8;color:rgba(230,225,240,0.85);max-width:700px;font-weight:300;
+  font-size:18px;line-height:1.8;color:rgba(26,21,37,0.85);max-width:700px;font-weight:300;
 }
 .nmw-story strong{color:var(--white);font-weight:500}
 .nmw-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-bottom:48px}
@@ -224,7 +224,7 @@ body{font-family:'Outfit',sans-serif;background:var(--black);color:var(--white);
 .brings-card::before{
   content:attr(data-num);position:absolute;top:-8px;right:16px;
   font-family:'Bricolage Grotesque',sans-serif;font-size:90px;font-weight:800;
-  color:rgba(195,155,211,0.08);line-height:1;
+  color:rgba(123,60,152,0.08);line-height:1;
 }
 .brings-card h3{
   font-family:'Bricolage Grotesque',sans-serif;
